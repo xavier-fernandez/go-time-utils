@@ -4,6 +4,8 @@ import (
 	"time"
 )
 
+var gmt_location, _ = time.LoadLocation("GMT")
+
 // Obtains the string of current timeslot.
 // The string will be returned with the following format: '2015-05-02 22:00:00 -0400 EDT'
 func CurrentTimeTimeslot(location *time.Location) string {
@@ -27,6 +29,5 @@ func TimeTimeslot(timestamp time.Time, location *time.Location) string {
 // Obtains the timeslot of a given time in the GMT.
 // The string will be returned will be returned with the following format: '2015-06-03 07:00:00'
 func TimeTimeslotInGMT(timestamp time.Time) string {
-	var location, _ = time.LoadLocation("GMT")
-	return TimeTimeslot(timestamp, location)[0:19]
+	return TimeTimeslot(timestamp, gmt_location)[0:19]
 }
