@@ -1,8 +1,6 @@
 package timeslot
 
-import (
-	"time"
-)
+import "time"
 
 var gmt_location, _ = time.LoadLocation("GMT")
 
