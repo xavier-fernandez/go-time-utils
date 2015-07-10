@@ -14,7 +14,7 @@ const testMonth = 5
 const testYear = 2015
 
 const testLocationGMT = "GMT"
-const testLocationNY = "america/new_york"
+const testLocationNY = "America/New_York"
 
 const testTimeslotInGMT = "2015-05-03 02:00:00"
 const testTimeslotNY = "2015-05-02 22:00:00 -0400 EDT"
